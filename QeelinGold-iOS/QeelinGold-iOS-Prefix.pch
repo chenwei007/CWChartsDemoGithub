@@ -20,6 +20,7 @@
 #import "UIColor+Simple.h"
 #import "Masonry.h"
 
+#define QLWeakSelf __weak typeof(self) weakSelf = self;
 #define color_new_dark [UIColor colorWithHexString:@"3d3e42"]
 #define font_new_tabbar [UIFont systemFontOfSize:10];
 #define color_font_46b97c [UIColor colorWithHexString:@"46b97c"]

@@ -8,28 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		DDCF2E5CE824D82061E4AA48 /* libPods-QeelinGold-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 126742ADCB07F0575B8EAC9D /* libPods-QeelinGold-iOS.a */; };
+		FA0E889C1F2B043500A6E0D0 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E887A1F2B043500A6E0D0 /* BalloonMarker.swift */; };
+		FA0E889D1F2B043500A6E0D0 /* DateValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E887C1F2B043500A6E0D0 /* DateValueFormatter.m */; };
+		FA0E889E1F2B043500A6E0D0 /* QLCandleStickAndBarNegativeView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E887E1F2B043500A6E0D0 /* QLCandleStickAndBarNegativeView.m */; };
+		FA0E889F1F2B043500A6E0D0 /* QLCandleStickMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E887F1F2B043500A6E0D0 /* QLCandleStickMarker.swift */; };
+		FA0E88A01F2B043500A6E0D0 /* QLChartsBarNegativeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E88811F2B043500A6E0D0 /* QLChartsBarNegativeTool.m */; };
+		FA0E88A11F2B043500A6E0D0 /* QLChartsCandleStickCombineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E88831F2B043500A6E0D0 /* QLChartsCandleStickCombineTool.m */; };
+		FA0E88A21F2B043500A6E0D0 /* QLChartsCandleStickTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E88851F2B043500A6E0D0 /* QLChartsCandleStickTool.m */; };
+		FA0E88A31F2B043500A6E0D0 /* QLChartsDataCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E88871F2B043500A6E0D0 /* QLChartsDataCategoryView.m */; };
+		FA0E88A41F2B043500A6E0D0 /* QLChartsInitializationCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E88891F2B043500A6E0D0 /* QLChartsInitializationCategory.m */; };
+		FA0E88A51F2B043500A6E0D0 /* QLChartsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E888B1F2B043500A6E0D0 /* QLChartsModel.m */; };
+		FA0E88A61F2B043500A6E0D0 /* QLChartsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E888D1F2B043500A6E0D0 /* QLChartsTool.m */; };
+		FA0E88A71F2B043500A6E0D0 /* QLChartsViews.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E888F1F2B043500A6E0D0 /* QLChartsViews.m */; };
+		FA0E88A81F2B043500A6E0D0 /* QLHJBaseChartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E88911F2B043500A6E0D0 /* QLHJBaseChartsView.m */; };
+		FA0E88A91F2B043500A6E0D0 /* QLHJCandleAndBarChartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E88931F2B043500A6E0D0 /* QLHJCandleAndBarChartsView.m */; };
+		FA0E88AA1F2B043500A6E0D0 /* QLHJTimeShareAndBarChartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E88961F2B043500A6E0D0 /* QLHJTimeShareAndBarChartsView.m */; };
+		FA0E88AB1F2B043500A6E0D0 /* QLHJTimeShareChartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E88981F2B043500A6E0D0 /* QLHJTimeShareChartsView.m */; };
+		FA0E88AC1F2B043500A6E0D0 /* QLTimeLineMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E88991F2B043500A6E0D0 /* QLTimeLineMarker.swift */; };
+		FA0E88AD1F2B043500A6E0D0 /* SetValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E889B1F2B043500A6E0D0 /* SetValueFormatter.m */; };
 		FA7467F81E97D495002DBE06 /* QeelinGold-iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7467F71E97D495002DBE06 /* QeelinGold-iOS.swift */; };
-		FA7468071E97D51B002DBE06 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7468001E97D4B3002DBE06 /* Charts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		FA7468231E97D5D5002DBE06 /* DateValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA74680A1E97D5D5002DBE06 /* DateValueFormatter.m */; };
-		FA7468241E97D5D5002DBE06 /* QLCandleStickAndBarNegativeView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA74680C1E97D5D5002DBE06 /* QLCandleStickAndBarNegativeView.m */; };
-		FA7468251E97D5D5002DBE06 /* QLChartsBarNegativeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA74680E1E97D5D5002DBE06 /* QLChartsBarNegativeTool.m */; };
-		FA7468261E97D5D5002DBE06 /* QLChartsCandleStickCombineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7468101E97D5D5002DBE06 /* QLChartsCandleStickCombineTool.m */; };
-		FA7468281E97D5D5002DBE06 /* QLChartsCandleStickTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7468141E97D5D5002DBE06 /* QLChartsCandleStickTool.m */; };
-		FA7468291E97D5D5002DBE06 /* QLChartsDataCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7468161E97D5D5002DBE06 /* QLChartsDataCategoryView.m */; };
-		FA74682B1E97D5D5002DBE06 /* QLChartsInitializationCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FA74681A1E97D5D5002DBE06 /* QLChartsInitializationCategory.m */; };
-		FA74682C1E97D5D5002DBE06 /* QLChartsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA74681C1E97D5D5002DBE06 /* QLChartsModel.m */; };
-		FA74682D1E97D5D5002DBE06 /* QLChartsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA74681E1E97D5D5002DBE06 /* QLChartsTool.m */; };
-		FA74682E1E97D5D5002DBE06 /* QLChartsViews.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7468201E97D5D5002DBE06 /* QLChartsViews.m */; };
-		FA74682F1E97D5D5002DBE06 /* SetValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7468221E97D5D5002DBE06 /* SetValueFormatter.m */; };
 		FA7468321E97D821002DBE06 /* btn1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7468311E97D821002DBE06 /* btn1ViewController.m */; };
 		FA7468351E97D82F002DBE06 /* btn2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7468341E97D82F002DBE06 /* btn2ViewController.m */; };
 		FA74683C1E97E245002DBE06 /* UIColor+Simple.m in Sources */ = {isa = PBXBuildFile; fileRef = FA74683B1E97E245002DBE06 /* UIColor+Simple.m */; };
 		FA7468421E97E26E002DBE06 /* colorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7468411E97E26E002DBE06 /* colorModel.m */; };
-		FA85C5BA1E97E4A400C08A09 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7468431E97E401002DBE06 /* BalloonMarker.swift */; };
 		FA85C5C81E97FA0E00C08A09 /* Documentsline.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA85C5C61E97FA0E00C08A09 /* Documentsline.plist */; };
 		FA85C5CA1E97FBDA00C08A09 /* Documentscome.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA85C5C91E97FBDA00C08A09 /* Documentscome.plist */; };
-		FA85C5CB1E98018E00C08A09 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7468001E97D4B3002DBE06 /* Charts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		FA85C5CC1E98018E00C08A09 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA7468001E97D4B3002DBE06 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA955A551E96416100762DA4 /* CWAsiNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FA955A541E96416100762DA4 /* CWAsiNetworkHandler.m */; };
 		FA955A591E96438A00762DA4 /* CWAsiNetworkItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FA955A581E96438A00762DA4 /* CWAsiNetworkItem.m */; };
 		FA955A5E1E96483900762DA4 /* CWNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA955A5D1E96483900762DA4 /* CWNetworkManager.m */; };
@@ -44,36 +47,31 @@
 		FAD012B41E9492EE0088B2D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD012B21E9492EE0088B2D9 /* LaunchScreen.storyboard */; };
 		FAD012BF1E9492EE0088B2D9 /* QeelinGold_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD012BE1E9492EE0088B2D9 /* QeelinGold_iOSTests.m */; };
 		FAD012CA1E9492EE0088B2D9 /* QeelinGold_iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD012C91E9492EE0088B2D9 /* QeelinGold_iOSUITests.m */; };
+		FAE8C97D1F2B05C7007B2F97 /* QLBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE8C97C1F2B05C7007B2F97 /* QLBaseModel.m */; };
+		FAE8C9831F2B0A9C007B2F97 /* btn3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE8C9821F2B0A9C007B2F97 /* btn3ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FA7467FF1E97D4B3002DBE06 /* PBXContainerItemProxy */ = {
+		FA0E88B41F2B043A00A6E0D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FA7467F91E97D4B2002DBE06 /* Charts.xcodeproj */;
+			containerPortal = FA0E88AE1F2B043A00A6E0D0 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 06165F241D8110E600722320;
 			remoteInfo = Charts;
 		};
-		FA7468011E97D4B3002DBE06 /* PBXContainerItemProxy */ = {
+		FA0E88B61F2B043A00A6E0D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FA7467F91E97D4B2002DBE06 /* Charts.xcodeproj */;
+			containerPortal = FA0E88AE1F2B043A00A6E0D0 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 06B120D51D811E6200D14B02;
 			remoteInfo = ChartsRealm;
 		};
-		FA7468031E97D4B3002DBE06 /* PBXContainerItemProxy */ = {
+		FA0E88B81F2B043A00A6E0D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FA7467F91E97D4B2002DBE06 /* Charts.xcodeproj */;
+			containerPortal = FA0E88AE1F2B043A00A6E0D0 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 06165F2E1D8110E600722320;
 			remoteInfo = ChartsTests;
-		};
-		FA85C5CD1E98018E00C08A09 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA7467F91E97D4B2002DBE06 /* Charts.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 06165F231D8110E600722320;
-			remoteInfo = Charts;
 		};
 		FAD012BB1E9492EE0088B2D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -98,7 +96,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FA85C5CC1E98018E00C08A09 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,31 +106,43 @@
 		126742ADCB07F0575B8EAC9D /* libPods-QeelinGold-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QeelinGold-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		204C3D51BEE4B0CB673C71CF /* Pods-QeelinGold-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QeelinGold-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-QeelinGold-iOS/Pods-QeelinGold-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		7959097B9FFD33637BB39E10 /* Pods-QeelinGold-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QeelinGold-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QeelinGold-iOS/Pods-QeelinGold-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		FA0E887A1F2B043500A6E0D0 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
+		FA0E887B1F2B043500A6E0D0 /* DateValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateValueFormatter.h; sourceTree = "<group>"; };
+		FA0E887C1F2B043500A6E0D0 /* DateValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateValueFormatter.m; sourceTree = "<group>"; };
+		FA0E887D1F2B043500A6E0D0 /* QLCandleStickAndBarNegativeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLCandleStickAndBarNegativeView.h; sourceTree = "<group>"; };
+		FA0E887E1F2B043500A6E0D0 /* QLCandleStickAndBarNegativeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLCandleStickAndBarNegativeView.m; sourceTree = "<group>"; };
+		FA0E887F1F2B043500A6E0D0 /* QLCandleStickMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QLCandleStickMarker.swift; sourceTree = "<group>"; };
+		FA0E88801F2B043500A6E0D0 /* QLChartsBarNegativeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsBarNegativeTool.h; sourceTree = "<group>"; };
+		FA0E88811F2B043500A6E0D0 /* QLChartsBarNegativeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsBarNegativeTool.m; sourceTree = "<group>"; };
+		FA0E88821F2B043500A6E0D0 /* QLChartsCandleStickCombineTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsCandleStickCombineTool.h; sourceTree = "<group>"; };
+		FA0E88831F2B043500A6E0D0 /* QLChartsCandleStickCombineTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsCandleStickCombineTool.m; sourceTree = "<group>"; };
+		FA0E88841F2B043500A6E0D0 /* QLChartsCandleStickTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsCandleStickTool.h; sourceTree = "<group>"; };
+		FA0E88851F2B043500A6E0D0 /* QLChartsCandleStickTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsCandleStickTool.m; sourceTree = "<group>"; };
+		FA0E88861F2B043500A6E0D0 /* QLChartsDataCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsDataCategoryView.h; sourceTree = "<group>"; };
+		FA0E88871F2B043500A6E0D0 /* QLChartsDataCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsDataCategoryView.m; sourceTree = "<group>"; };
+		FA0E88881F2B043500A6E0D0 /* QLChartsInitializationCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsInitializationCategory.h; sourceTree = "<group>"; };
+		FA0E88891F2B043500A6E0D0 /* QLChartsInitializationCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsInitializationCategory.m; sourceTree = "<group>"; };
+		FA0E888A1F2B043500A6E0D0 /* QLChartsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsModel.h; sourceTree = "<group>"; };
+		FA0E888B1F2B043500A6E0D0 /* QLChartsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsModel.m; sourceTree = "<group>"; };
+		FA0E888C1F2B043500A6E0D0 /* QLChartsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsTool.h; sourceTree = "<group>"; };
+		FA0E888D1F2B043500A6E0D0 /* QLChartsTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsTool.m; sourceTree = "<group>"; };
+		FA0E888E1F2B043500A6E0D0 /* QLChartsViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsViews.h; sourceTree = "<group>"; };
+		FA0E888F1F2B043500A6E0D0 /* QLChartsViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsViews.m; sourceTree = "<group>"; };
+		FA0E88901F2B043500A6E0D0 /* QLHJBaseChartsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLHJBaseChartsView.h; sourceTree = "<group>"; };
+		FA0E88911F2B043500A6E0D0 /* QLHJBaseChartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLHJBaseChartsView.m; sourceTree = "<group>"; };
+		FA0E88921F2B043500A6E0D0 /* QLHJCandleAndBarChartsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLHJCandleAndBarChartsView.h; sourceTree = "<group>"; };
+		FA0E88931F2B043500A6E0D0 /* QLHJCandleAndBarChartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLHJCandleAndBarChartsView.m; sourceTree = "<group>"; };
+		FA0E88941F2B043500A6E0D0 /* QLHJChartsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLHJChartsHeader.h; sourceTree = "<group>"; };
+		FA0E88951F2B043500A6E0D0 /* QLHJTimeShareAndBarChartsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLHJTimeShareAndBarChartsView.h; sourceTree = "<group>"; };
+		FA0E88961F2B043500A6E0D0 /* QLHJTimeShareAndBarChartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLHJTimeShareAndBarChartsView.m; sourceTree = "<group>"; };
+		FA0E88971F2B043500A6E0D0 /* QLHJTimeShareChartsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLHJTimeShareChartsView.h; sourceTree = "<group>"; };
+		FA0E88981F2B043500A6E0D0 /* QLHJTimeShareChartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLHJTimeShareChartsView.m; sourceTree = "<group>"; };
+		FA0E88991F2B043500A6E0D0 /* QLTimeLineMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QLTimeLineMarker.swift; sourceTree = "<group>"; };
+		FA0E889A1F2B043500A6E0D0 /* SetValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetValueFormatter.h; sourceTree = "<group>"; };
+		FA0E889B1F2B043500A6E0D0 /* SetValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetValueFormatter.m; sourceTree = "<group>"; };
+		FA0E88AE1F2B043A00A6E0D0 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "QeelinGold-iOS/Charts-3.0.1/Charts.xcodeproj"; sourceTree = "<group>"; };
 		FA7467F61E97D494002DBE06 /* QeelinGold-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QeelinGold-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		FA7467F71E97D495002DBE06 /* QeelinGold-iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QeelinGold-iOS.swift"; sourceTree = "<group>"; };
-		FA7467F91E97D4B2002DBE06 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-3.0.1/Charts.xcodeproj"; sourceTree = "<group>"; };
-		FA7468091E97D5D5002DBE06 /* DateValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateValueFormatter.h; sourceTree = "<group>"; };
-		FA74680A1E97D5D5002DBE06 /* DateValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateValueFormatter.m; sourceTree = "<group>"; };
-		FA74680B1E97D5D5002DBE06 /* QLCandleStickAndBarNegativeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLCandleStickAndBarNegativeView.h; sourceTree = "<group>"; };
-		FA74680C1E97D5D5002DBE06 /* QLCandleStickAndBarNegativeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLCandleStickAndBarNegativeView.m; sourceTree = "<group>"; };
-		FA74680D1E97D5D5002DBE06 /* QLChartsBarNegativeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsBarNegativeTool.h; sourceTree = "<group>"; };
-		FA74680E1E97D5D5002DBE06 /* QLChartsBarNegativeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsBarNegativeTool.m; sourceTree = "<group>"; };
-		FA74680F1E97D5D5002DBE06 /* QLChartsCandleStickCombineTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsCandleStickCombineTool.h; sourceTree = "<group>"; };
-		FA7468101E97D5D5002DBE06 /* QLChartsCandleStickCombineTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsCandleStickCombineTool.m; sourceTree = "<group>"; };
-		FA7468131E97D5D5002DBE06 /* QLChartsCandleStickTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsCandleStickTool.h; sourceTree = "<group>"; };
-		FA7468141E97D5D5002DBE06 /* QLChartsCandleStickTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsCandleStickTool.m; sourceTree = "<group>"; };
-		FA7468151E97D5D5002DBE06 /* QLChartsDataCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsDataCategoryView.h; sourceTree = "<group>"; };
-		FA7468161E97D5D5002DBE06 /* QLChartsDataCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsDataCategoryView.m; sourceTree = "<group>"; };
-		FA7468191E97D5D5002DBE06 /* QLChartsInitializationCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsInitializationCategory.h; sourceTree = "<group>"; };
-		FA74681A1E97D5D5002DBE06 /* QLChartsInitializationCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsInitializationCategory.m; sourceTree = "<group>"; };
-		FA74681B1E97D5D5002DBE06 /* QLChartsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsModel.h; sourceTree = "<group>"; };
-		FA74681C1E97D5D5002DBE06 /* QLChartsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsModel.m; sourceTree = "<group>"; };
-		FA74681D1E97D5D5002DBE06 /* QLChartsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsTool.h; sourceTree = "<group>"; };
-		FA74681E1E97D5D5002DBE06 /* QLChartsTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsTool.m; sourceTree = "<group>"; };
-		FA74681F1E97D5D5002DBE06 /* QLChartsViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLChartsViews.h; sourceTree = "<group>"; };
-		FA7468201E97D5D5002DBE06 /* QLChartsViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLChartsViews.m; sourceTree = "<group>"; };
-		FA7468211E97D5D5002DBE06 /* SetValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetValueFormatter.h; sourceTree = "<group>"; };
-		FA7468221E97D5D5002DBE06 /* SetValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetValueFormatter.m; sourceTree = "<group>"; };
 		FA7468301E97D821002DBE06 /* btn1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btn1ViewController.h; sourceTree = "<group>"; };
 		FA7468311E97D821002DBE06 /* btn1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = btn1ViewController.m; sourceTree = "<group>"; };
 		FA7468331E97D82F002DBE06 /* btn2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btn2ViewController.h; sourceTree = "<group>"; };
@@ -142,7 +151,6 @@
 		FA74683B1E97E245002DBE06 /* UIColor+Simple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Simple.m"; sourceTree = "<group>"; };
 		FA7468401E97E26E002DBE06 /* colorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colorModel.h; sourceTree = "<group>"; };
 		FA7468411E97E26E002DBE06 /* colorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = colorModel.m; sourceTree = "<group>"; };
-		FA7468431E97E401002DBE06 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
 		FA85C5C61E97FA0E00C08A09 /* Documentsline.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Documentsline.plist; sourceTree = "<group>"; };
 		FA85C5C91E97FBDA00C08A09 /* Documentscome.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Documentscome.plist; sourceTree = "<group>"; };
 		FA955A521E963F6000762DA4 /* CWAsiNetworkUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWAsiNetworkUrl.h; sourceTree = "<group>"; };
@@ -177,6 +185,10 @@
 		FAD012C51E9492EE0088B2D9 /* QeelinGold-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QeelinGold-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD012C91E9492EE0088B2D9 /* QeelinGold_iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QeelinGold_iOSUITests.m; sourceTree = "<group>"; };
 		FAD012CB1E9492EE0088B2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAE8C97B1F2B05C7007B2F97 /* QLBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLBaseModel.h; sourceTree = "<group>"; };
+		FAE8C97C1F2B05C7007B2F97 /* QLBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLBaseModel.m; sourceTree = "<group>"; };
+		FAE8C9811F2B0A9C007B2F97 /* btn3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btn3ViewController.h; sourceTree = "<group>"; };
+		FAE8C9821F2B0A9C007B2F97 /* btn3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = btn3ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,8 +196,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA7468071E97D51B002DBE06 /* Charts.framework in Frameworks */,
-				FA85C5CB1E98018E00C08A09 /* Charts.framework in Frameworks */,
 				FA955A651E9652E800762DA4 /* AdSupport.framework in Frameworks */,
 				DDCF2E5CE824D82061E4AA48 /* libPods-QeelinGold-iOS.a in Frameworks */,
 			);
@@ -226,49 +236,65 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		FA7467FA1E97D4B2002DBE06 /* Products */ = {
+		FA0E88791F2B043500A6E0D0 /* chartsTool */ = {
 			isa = PBXGroup;
 			children = (
-				FA7468001E97D4B3002DBE06 /* Charts.framework */,
-				FA7468021E97D4B3002DBE06 /* ChartsRealm.framework */,
-				FA7468041E97D4B3002DBE06 /* ChartsTests.xctest */,
+				FAE8C97B1F2B05C7007B2F97 /* QLBaseModel.h */,
+				FAE8C97C1F2B05C7007B2F97 /* QLBaseModel.m */,
+				FA0E887A1F2B043500A6E0D0 /* BalloonMarker.swift */,
+				FA0E887B1F2B043500A6E0D0 /* DateValueFormatter.h */,
+				FA0E887C1F2B043500A6E0D0 /* DateValueFormatter.m */,
+				FA0E887D1F2B043500A6E0D0 /* QLCandleStickAndBarNegativeView.h */,
+				FA0E887E1F2B043500A6E0D0 /* QLCandleStickAndBarNegativeView.m */,
+				FA0E887F1F2B043500A6E0D0 /* QLCandleStickMarker.swift */,
+				FA0E88801F2B043500A6E0D0 /* QLChartsBarNegativeTool.h */,
+				FA0E88811F2B043500A6E0D0 /* QLChartsBarNegativeTool.m */,
+				FA0E88821F2B043500A6E0D0 /* QLChartsCandleStickCombineTool.h */,
+				FA0E88831F2B043500A6E0D0 /* QLChartsCandleStickCombineTool.m */,
+				FA0E88841F2B043500A6E0D0 /* QLChartsCandleStickTool.h */,
+				FA0E88851F2B043500A6E0D0 /* QLChartsCandleStickTool.m */,
+				FA0E88861F2B043500A6E0D0 /* QLChartsDataCategoryView.h */,
+				FA0E88871F2B043500A6E0D0 /* QLChartsDataCategoryView.m */,
+				FA0E88881F2B043500A6E0D0 /* QLChartsInitializationCategory.h */,
+				FA0E88891F2B043500A6E0D0 /* QLChartsInitializationCategory.m */,
+				FA0E888A1F2B043500A6E0D0 /* QLChartsModel.h */,
+				FA0E888B1F2B043500A6E0D0 /* QLChartsModel.m */,
+				FA0E888C1F2B043500A6E0D0 /* QLChartsTool.h */,
+				FA0E888D1F2B043500A6E0D0 /* QLChartsTool.m */,
+				FA0E888E1F2B043500A6E0D0 /* QLChartsViews.h */,
+				FA0E888F1F2B043500A6E0D0 /* QLChartsViews.m */,
+				FA0E88901F2B043500A6E0D0 /* QLHJBaseChartsView.h */,
+				FA0E88911F2B043500A6E0D0 /* QLHJBaseChartsView.m */,
+				FA0E88921F2B043500A6E0D0 /* QLHJCandleAndBarChartsView.h */,
+				FA0E88931F2B043500A6E0D0 /* QLHJCandleAndBarChartsView.m */,
+				FA0E88941F2B043500A6E0D0 /* QLHJChartsHeader.h */,
+				FA0E88951F2B043500A6E0D0 /* QLHJTimeShareAndBarChartsView.h */,
+				FA0E88961F2B043500A6E0D0 /* QLHJTimeShareAndBarChartsView.m */,
+				FA0E88971F2B043500A6E0D0 /* QLHJTimeShareChartsView.h */,
+				FA0E88981F2B043500A6E0D0 /* QLHJTimeShareChartsView.m */,
+				FA0E88991F2B043500A6E0D0 /* QLTimeLineMarker.swift */,
+				FA0E889A1F2B043500A6E0D0 /* SetValueFormatter.h */,
+				FA0E889B1F2B043500A6E0D0 /* SetValueFormatter.m */,
 			);
-			name = Products;
+			name = chartsTool;
+			path = "QeelinGold-iOS/chartsTool";
 			sourceTree = "<group>";
 		};
-		FA7468081E97D5D5002DBE06 /* chartsTool */ = {
+		FA0E88AF1F2B043A00A6E0D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA7468091E97D5D5002DBE06 /* DateValueFormatter.h */,
-				FA74680A1E97D5D5002DBE06 /* DateValueFormatter.m */,
-				FA74680B1E97D5D5002DBE06 /* QLCandleStickAndBarNegativeView.h */,
-				FA74680C1E97D5D5002DBE06 /* QLCandleStickAndBarNegativeView.m */,
-				FA74680D1E97D5D5002DBE06 /* QLChartsBarNegativeTool.h */,
-				FA74680E1E97D5D5002DBE06 /* QLChartsBarNegativeTool.m */,
-				FA74680F1E97D5D5002DBE06 /* QLChartsCandleStickCombineTool.h */,
-				FA7468101E97D5D5002DBE06 /* QLChartsCandleStickCombineTool.m */,
-				FA7468131E97D5D5002DBE06 /* QLChartsCandleStickTool.h */,
-				FA7468141E97D5D5002DBE06 /* QLChartsCandleStickTool.m */,
-				FA7468151E97D5D5002DBE06 /* QLChartsDataCategoryView.h */,
-				FA7468161E97D5D5002DBE06 /* QLChartsDataCategoryView.m */,
-				FA7468191E97D5D5002DBE06 /* QLChartsInitializationCategory.h */,
-				FA74681A1E97D5D5002DBE06 /* QLChartsInitializationCategory.m */,
-				FA74681B1E97D5D5002DBE06 /* QLChartsModel.h */,
-				FA74681C1E97D5D5002DBE06 /* QLChartsModel.m */,
-				FA74681D1E97D5D5002DBE06 /* QLChartsTool.h */,
-				FA74681E1E97D5D5002DBE06 /* QLChartsTool.m */,
-				FA74681F1E97D5D5002DBE06 /* QLChartsViews.h */,
-				FA7468201E97D5D5002DBE06 /* QLChartsViews.m */,
-				FA7468211E97D5D5002DBE06 /* SetValueFormatter.h */,
-				FA7468221E97D5D5002DBE06 /* SetValueFormatter.m */,
+				FA0E88B51F2B043A00A6E0D0 /* Charts.framework */,
+				FA0E88B71F2B043A00A6E0D0 /* ChartsRealm.framework */,
+				FA0E88B91F2B043A00A6E0D0 /* ChartsTests.xctest */,
 			);
-			path = chartsTool;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		FAD012981E9492EE0088B2D9 = {
 			isa = PBXGroup;
 			children = (
-				FA7468431E97E401002DBE06 /* BalloonMarker.swift */,
+				FA0E88AE1F2B043A00A6E0D0 /* Charts.xcodeproj */,
+				FA0E88791F2B043500A6E0D0 /* chartsTool */,
 				FAD012A31E9492EE0088B2D9 /* QeelinGold-iOS */,
 				FAD012BD1E9492EE0088B2D9 /* QeelinGold-iOSTests */,
 				FAD012C81E9492EE0088B2D9 /* QeelinGold-iOSUITests */,
@@ -295,8 +321,6 @@
 				FA7468411E97E26E002DBE06 /* colorModel.m */,
 				FA74683A1E97E245002DBE06 /* UIColor+Simple.h */,
 				FA74683B1E97E245002DBE06 /* UIColor+Simple.m */,
-				FA7468081E97D5D5002DBE06 /* chartsTool */,
-				FA7467F91E97D4B2002DBE06 /* Charts.xcodeproj */,
 				FAD012D91E9497360088B2D9 /* app_tool */,
 				FAD012AA1E9492EE0088B2D9 /* ViewController.h */,
 				FAD012AB1E9492EE0088B2D9 /* ViewController.m */,
@@ -309,6 +333,8 @@
 				FA7468311E97D821002DBE06 /* btn1ViewController.m */,
 				FA7468331E97D82F002DBE06 /* btn2ViewController.h */,
 				FA7468341E97D82F002DBE06 /* btn2ViewController.m */,
+				FAE8C9811F2B0A9C007B2F97 /* btn3ViewController.h */,
+				FAE8C9821F2B0A9C007B2F97 /* btn3ViewController.m */,
 				FA9E4D291EBC4FD800780CE9 /* UIButton+Action.h */,
 				FA9E4D2A1EBC4FD800780CE9 /* UIButton+Action.m */,
 			);
@@ -393,7 +419,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FA85C5CE1E98018E00C08A09 /* PBXTargetDependency */,
 			);
 			name = "QeelinGold-iOS";
 			productName = "QeelinGold-iOS";
@@ -478,8 +503,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = FA7467FA1E97D4B2002DBE06 /* Products */;
-					ProjectRef = FA7467F91E97D4B2002DBE06 /* Charts.xcodeproj */;
+					ProductGroup = FA0E88AF1F2B043A00A6E0D0 /* Products */;
+					ProjectRef = FA0E88AE1F2B043A00A6E0D0 /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -492,25 +517,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		FA7468001E97D4B3002DBE06 /* Charts.framework */ = {
+		FA0E88B51F2B043A00A6E0D0 /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = FA7467FF1E97D4B3002DBE06 /* PBXContainerItemProxy */;
+			remoteRef = FA0E88B41F2B043A00A6E0D0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FA7468021E97D4B3002DBE06 /* ChartsRealm.framework */ = {
+		FA0E88B71F2B043A00A6E0D0 /* ChartsRealm.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ChartsRealm.framework;
-			remoteRef = FA7468011E97D4B3002DBE06 /* PBXContainerItemProxy */;
+			remoteRef = FA0E88B61F2B043A00A6E0D0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FA7468041E97D4B3002DBE06 /* ChartsTests.xctest */ = {
+		FA0E88B91F2B043A00A6E0D0 /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = FA7468031E97D4B3002DBE06 /* PBXContainerItemProxy */;
+			remoteRef = FA0E88B81F2B043A00A6E0D0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -597,31 +622,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA85C5BA1E97E4A400C08A09 /* BalloonMarker.swift in Sources */,
+				FA0E88A71F2B043500A6E0D0 /* QLChartsViews.m in Sources */,
 				FAD012AC1E9492EE0088B2D9 /* ViewController.m in Sources */,
+				FA0E88AB1F2B043500A6E0D0 /* QLHJTimeShareChartsView.m in Sources */,
 				FA74683C1E97E245002DBE06 /* UIColor+Simple.m in Sources */,
-				FA7468281E97D5D5002DBE06 /* QLChartsCandleStickTool.m in Sources */,
 				FA7468321E97D821002DBE06 /* btn1ViewController.m in Sources */,
 				FAD012A91E9492EE0088B2D9 /* AppDelegate.m in Sources */,
-				FA7468241E97D5D5002DBE06 /* QLCandleStickAndBarNegativeView.m in Sources */,
-				FA74682D1E97D5D5002DBE06 /* QLChartsTool.m in Sources */,
 				FA955A611E9648C000762DA4 /* CWUploadParam.m in Sources */,
 				FA7467F81E97D495002DBE06 /* QeelinGold-iOS.swift in Sources */,
 				FA955A5E1E96483900762DA4 /* CWNetworkManager.m in Sources */,
-				FA7468231E97D5D5002DBE06 /* DateValueFormatter.m in Sources */,
 				FA7468351E97D82F002DBE06 /* btn2ViewController.m in Sources */,
-				FA74682C1E97D5D5002DBE06 /* QLChartsModel.m in Sources */,
+				FA0E88AD1F2B043500A6E0D0 /* SetValueFormatter.m in Sources */,
+				FA0E889E1F2B043500A6E0D0 /* QLCandleStickAndBarNegativeView.m in Sources */,
+				FA0E889C1F2B043500A6E0D0 /* BalloonMarker.swift in Sources */,
 				FA9E4D2B1EBC4FD800780CE9 /* UIButton+Action.m in Sources */,
-				FA7468291E97D5D5002DBE06 /* QLChartsDataCategoryView.m in Sources */,
+				FAE8C9831F2B0A9C007B2F97 /* btn3ViewController.m in Sources */,
+				FA0E88A91F2B043500A6E0D0 /* QLHJCandleAndBarChartsView.m in Sources */,
+				FA0E88A31F2B043500A6E0D0 /* QLChartsDataCategoryView.m in Sources */,
 				FA7468421E97E26E002DBE06 /* colorModel.m in Sources */,
-				FA74682F1E97D5D5002DBE06 /* SetValueFormatter.m in Sources */,
-				FA74682E1E97D5D5002DBE06 /* QLChartsViews.m in Sources */,
-				FA7468261E97D5D5002DBE06 /* QLChartsCandleStickCombineTool.m in Sources */,
-				FA7468251E97D5D5002DBE06 /* QLChartsBarNegativeTool.m in Sources */,
+				FAE8C97D1F2B05C7007B2F97 /* QLBaseModel.m in Sources */,
 				FAD012A61E9492EE0088B2D9 /* main.m in Sources */,
+				FA0E88A11F2B043500A6E0D0 /* QLChartsCandleStickCombineTool.m in Sources */,
+				FA0E88AA1F2B043500A6E0D0 /* QLHJTimeShareAndBarChartsView.m in Sources */,
+				FA0E88A01F2B043500A6E0D0 /* QLChartsBarNegativeTool.m in Sources */,
+				FA0E889F1F2B043500A6E0D0 /* QLCandleStickMarker.swift in Sources */,
 				FA955A591E96438A00762DA4 /* CWAsiNetworkItem.m in Sources */,
-				FA74682B1E97D5D5002DBE06 /* QLChartsInitializationCategory.m in Sources */,
+				FA0E889D1F2B043500A6E0D0 /* DateValueFormatter.m in Sources */,
+				FA0E88A61F2B043500A6E0D0 /* QLChartsTool.m in Sources */,
+				FA0E88A21F2B043500A6E0D0 /* QLChartsCandleStickTool.m in Sources */,
+				FA0E88A81F2B043500A6E0D0 /* QLHJBaseChartsView.m in Sources */,
+				FA0E88A51F2B043500A6E0D0 /* QLChartsModel.m in Sources */,
 				FA955A551E96416100762DA4 /* CWAsiNetworkHandler.m in Sources */,
+				FA0E88AC1F2B043500A6E0D0 /* QLTimeLineMarker.swift in Sources */,
+				FA0E88A41F2B043500A6E0D0 /* QLChartsInitializationCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,11 +677,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FA85C5CE1E98018E00C08A09 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Charts;
-			targetProxy = FA85C5CD1E98018E00C08A09 /* PBXContainerItemProxy */;
-		};
 		FAD012BC1E9492EE0088B2D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FAD012A01E9492EE0088B2D9 /* QeelinGold-iOS */;

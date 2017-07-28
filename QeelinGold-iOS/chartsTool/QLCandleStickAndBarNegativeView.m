@@ -8,10 +8,9 @@
 
 #import "QLCandleStickAndBarNegativeView.h"
 #import <Charts/Charts.h>
-//#import "QeelinGold-iOS-Swift.h"
+#import "QeelinGold_iOS-Swift.h"
 #import "QLChartsDataCategoryView.h"
 #import "QLChartsViews.h"
-#import "Masonry.h"
 
 @interface QLCandleStickAndBarNegativeView()
 @property (nonatomic ,strong) UILabel *myBarNegativeViewLabel;
@@ -73,42 +72,79 @@
 
 }
 - (void)showMarkWith:(NSInteger)index withHight:(ChartHighlight*)highl{
-//        NSArray *newArr = self.arr[index];
-//        NSString *xStr = ((NSNumber *)(newArr.lastObject)).stringValue;
-//        NSDate *date = [NSDate dateWithTimeIntervalSince1970:xStr.floatValue / 1000];
-//        NSDateFormatter *df = [NSDateFormatter new];
-//        NSString *period = [self.parametsDic objectForKey:@"period"];
-//        BOOL isMinu = NO;
-//        if (period.integerValue>=1 && period.integerValue<=5) {
-//            isMinu = YES;
-//        }else{
-//            isMinu = NO;
-//        }
-//        if (isMinu) {
-//            [df setDateFormat:@"HH:mm"];//时间戳转成日期
-//        }else{
-//            [df setDateFormat:@"MM-dd"];//时间戳转成日期
-//        }
-//        NSString *  turnStr = [df stringFromDate:date];
-//    
-//        double high = ((NSNumber *)newArr[2]).doubleValue;
-//        double low = ((NSNumber *)newArr[3]).doubleValue;
-//        double open = ((NSNumber *)newArr[1]).doubleValue;
-//        double close = ((NSNumber *)newArr[4]).doubleValue;
-//        NSDictionary *dic = @{
-//                              @"time":turnStr,
-//                              @"open":[NSString stringWithFormat:@"%0.2f",open],
-//                              @"close":[NSString stringWithFormat:@"%0.2f",close],
-//                              @"high":[NSString stringWithFormat:@"%0.2f",high],
-//                              @"low":[NSString stringWithFormat:@"%0.2f",low]
-//                              };
-//        CandleChartDataEntry *entry =[[CandleChartDataEntry alloc]initWithX:index shadowH:high shadowL:low open:open close:close data:dic];
-////    self.myCandleStickChartsView setHighlighter:<#(id<IChartHighlighter> _Nullable)#>
-//   ChartHighlight *highlll = [self.myCandleStickChartsView.highlighter getHighlightWithX:entry.x y:entry.y];
-//    [self.myCandleStickChartsView.marker refreshContentWithEntry:entry highlight:highlll ];
-//    [self.myCandleStickChartsView setHighlighter:highlll];
+    NSArray *newArr = self.arr[index];
+    NSString *xStr = ((NSNumber *)(newArr.lastObject)).stringValue;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:xStr.floatValue / 1000];
+    NSDateFormatter *df = [NSDateFormatter new];
+    NSString *period = [self.parametsDic objectForKey:@"period"];
+    BOOL isMinu = NO;
+    if (period.integerValue>=1 && period.integerValue<=5) {
+        isMinu = YES;
+    }else{
+        isMinu = NO;
+    }
+    if (isMinu) {
+        [df setDateFormat:@"HH:mm"];//时间戳转成日期
+    }else{
+        [df setDateFormat:@"MM-dd"];//时间戳转成日期
+    }
+    NSString *  turnStr = [df stringFromDate:date];
     
+    double high = ((NSNumber *)newArr[2]).doubleValue;
+    double low = ((NSNumber *)newArr[3]).doubleValue;
+    double open = ((NSNumber *)newArr[1]).doubleValue;
+    double close = ((NSNumber *)newArr[4]).doubleValue;
+    NSDictionary *dic = @{
+                          @"time":turnStr,
+                          @"open":[NSString stringWithFormat:@"%0.2f",open],
+                          @"close":[NSString stringWithFormat:@"%0.2f",close],
+                          @"high":[NSString stringWithFormat:@"%0.2f",high],
+                          @"low":[NSString stringWithFormat:@"%0.2f",low]
+                          };
+    CandleChartDataEntry *entry =[[CandleChartDataEntry alloc]initWithX:index shadowH:high shadowL:low open:open close:close data:dic];
+    ChartHighlight *highlll = [[ChartHighlight alloc]initWithX:entry.x y:entry.y dataSetIndex:highl.dataSetIndex];
+    highlll.dataIndex = highl.dataIndex;
+    NSArray *arr = @[highlll];
+    [self.myCandleStickChartsView highlightValues:arr];
+}
+- (NSString *)getBarAndCandleTextWithIndex:(NSInteger )index{
+    NSString *myStr = @"";
+    NSArray *newArr = self.arr[index];
+    NSString *xStr = ((NSNumber *)(newArr.lastObject)).stringValue;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:xStr.floatValue / 1000];
+    NSDateFormatter *df = [NSDateFormatter new];
+    NSString *period = [self.parametsDic objectForKey:@"period"];
+    BOOL isMinu = NO;
+    if (period.integerValue>=1 && period.integerValue<=5) {
+        isMinu = YES;
+    }else{
+        isMinu = NO;
+    }
+    if (isMinu) {
+        [df setDateFormat:@"HH:mm"];//时间戳转成日期
+    }else{
+        [df setDateFormat:@"MM-dd"];//时间戳转成日期
+    }
+    NSString *  turnStr = [df stringFromDate:date];
     
+    double high = ((NSNumber *)newArr[2]).doubleValue;
+    double low = ((NSNumber *)newArr[3]).doubleValue;
+    double open = ((NSNumber *)newArr[1]).doubleValue;
+    double close = ((NSNumber *)newArr[4]).doubleValue;
+    NSString *str1 = [NSString stringWithFormat:@"开 %0.2f",open];
+    NSString *str2 = [NSString stringWithFormat:@"收 %0.2f",close];
+    NSString *str3 = [NSString stringWithFormat:@"高 %0.2f",high];
+    NSString *str4 = [NSString stringWithFormat:@"低 %0.2f",low];
+    NSString *str5 = [NSString stringWithFormat:@"涨跌 %@",turnStr];
+    myStr = [NSString stringWithFormat:@"    %@  %@  %@  %@  %@",str1,str2,str3,str4,str5];
+    return myStr;
+
+}
+- (void)setDragAndHighlightPerDragEnble:(BOOL)isEnble{
+    [self.myBarNegativeView setDragEnabled:isEnble];
+    [self.myCandleStickChartsView setDragEnabled:isEnble];
+    [self.myCandleStickChartsView setHighlightPerDragEnabled:!isEnble];
+    [self.myBarNegativeView setHighlightPerDragEnabled:!isEnble];
 }
 - (void)commonInit{
     [self addSubview:self.myCandleStickChartsViewLabel];
@@ -138,7 +174,7 @@
     [self.myChartsDataCategoryView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self);
         make.left.equalTo(self.myCandleStickChartsView.mas_right).offset(-10);
-        make.width.equalTo(@(70));
+        make.width.equalTo(@70);
         make.right.equalTo(self);
         make.bottom.equalTo(self.myBarNegativeView.mas_top).offset(-10);
     }];

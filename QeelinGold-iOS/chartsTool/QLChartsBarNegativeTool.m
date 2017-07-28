@@ -96,7 +96,9 @@
     oneSet = [QLChartsInitializationCategory getMyLineChartDataSetWith:oneYVals withLabelText:labelStr1];
     [oneSet setColor:ChartsCombineColorOne];
     oneSet.lineWidth = 1.0;
-    oneSet.highlightEnabled = NO;
+    oneSet.highlightEnabled = YES;
+    oneSet.drawHorizontalHighlightIndicatorEnabled = NO;
+    oneSet.highlightColor = [UIColor blackColor];
     LineChartData *lineOneData = [[LineChartData alloc]initWithDataSet:oneSet];
     [lineOneData setValueFont:[UIFont systemFontOfSize:0.f]];
     [dataSets addObject:oneSet];
@@ -125,10 +127,17 @@
     //三条折线合并一起
     LineChartData *lineAllData = [[LineChartData alloc]initWithDataSets:dataSets];
 
-    BarChartDataSet *set = [QLChartsInitializationCategory getMyBarChartDataSetWith:values withLabelText:labelStr3];
+    BarChartDataSet *set = nil;
+    if (self.BtnType == QLChartsDataCategoryViewMACDButton) {
+        set = [QLChartsInitializationCategory getMyBarChartDataSetWith:values withLabelText:labelStr3];
+    }else{
+        NSMutableArray<BarChartDataEntry *> *clearValues = [[NSMutableArray alloc] init];
+        set = [QLChartsInitializationCategory getMyBarChartDataSetWith:clearValues withLabelText:labelStr3];
+    }
+    set.highlightEnabled = NO;
     set.colors = colors;
     set.valueColors = colors;
-
+    
     BarChartData *barData = [[BarChartData alloc] initWithDataSet:set];
     [barData setValueFont:[UIFont systemFontOfSize:0.f]];
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
@@ -137,19 +146,19 @@
     barData.barWidth = 0.8;
 
     CombinedChartData *combineData = [[CombinedChartData alloc] init];
+
     self.myBarChartView.data = nil;
     combineData.lineData = lineAllData;
-    if (self.BtnType == QLChartsDataCategoryViewMACDButton) {
-         combineData.barData = barData;   
-    }
+    combineData.barData = barData;
 //    self.myBarChartView.leftAxis.axisMaximum = 0.78;
 //    self.myBarChartView.leftAxis.axisMinimum = -0.96;
     self.myBarChartView.data = combineData;
     [self.myBarChartView setVisibleXRangeMaximum:50];
-    [self.myBarChartView setVisibleXRangeMinimum:50];
+//    [self.myBarChartView setVisibleXRangeMinimum:50];
     [self.myBarChartView setVisibleXRangeMinimum:20];
     [self.myBarChartView moveViewToX:self.barArray.count];
     [self.myBarChartView autoScale];
+    
 }
 
 - (ChartYAxis *)leftYAxis{

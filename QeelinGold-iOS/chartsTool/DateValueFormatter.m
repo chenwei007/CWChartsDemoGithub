@@ -25,6 +25,7 @@
 }
 - (NSString *)stringForValue:(double)value axis:(ChartAxisBase *)axis
 {
+//    PTTLog(@"当前%f----总个数%lu----%@",value,(unsigned long)_arr.count,axis)
     if ((NSInteger)value >= _arr.count) {
         return @"";
     }

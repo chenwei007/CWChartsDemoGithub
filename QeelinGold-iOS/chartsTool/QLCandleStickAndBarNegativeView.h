@@ -17,4 +17,8 @@
 - (void)showMarkWith:(NSInteger)index withHight:(ChartHighlight*)highl;
 - (instancetype)initWithZoomEnabled:(BOOL)isZoom;
 @property (nonatomic ,assign) BOOL isZoom;
+@property (nonatomic ,assign) BOOL isShowCandleStickMarker;
+@property (nonatomic ,assign) BOOL isShowBarMarker;
+- (void)setDragAndHighlightPerDragEnble:(BOOL)isEnble;
+- (NSString *)getBarAndCandleTextWithIndex:(NSInteger )index;
 @end

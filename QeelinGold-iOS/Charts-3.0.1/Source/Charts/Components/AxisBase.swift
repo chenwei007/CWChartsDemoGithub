@@ -87,6 +87,18 @@ open class AxisBase: ComponentBase
     /// the number of decimal digits to use (for the default formatter
     open var decimals: Int = 0
     
+    //自定义参数
+    public var xAxisIsEvenlyEnabled:Bool{
+        get{
+            return _xAxisIsEvenlyEnabled;
+        }
+        set{
+            _xAxisIsEvenlyEnabled = newValue
+        }
+    }
+    private var _xAxisIsEvenlyEnabled = false//结束
+
+    
     /// When true, axis labels are controlled by the `granularity` property.
     /// When false, axis values could possibly be repeated.
     /// This could happen if two adjacent axis values are rounded to same value.

@@ -6,7 +6,9 @@
 //
 //
 
-@interface QLChartsModel : NSObject
+#import "QLBaseModel.h"
+
+@interface QLChartsModel : QLBaseModel
 @property (nonatomic ,strong) NSArray *leftAxisArray;
 @property (nonatomic ,strong) NSArray *rightAxisArray;
 @property (nonatomic ,strong) NSArray *xBottonAxisArray;

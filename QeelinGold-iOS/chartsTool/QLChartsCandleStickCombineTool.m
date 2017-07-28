@@ -128,6 +128,8 @@
 //        [self.myBarChartView moveViewToX:self.candleArray.count];
 //    }else{
         CandleDataset = [QLChartsInitializationCategory getMyCandleChartDataSetWith:yVals1 withLabelText:@""];
+        CandleDataset.highlightEnabled = YES;
+        CandleDataset.highlightColor = [UIColor blackColor];
         //第一条折线
         oneSet = [QLChartsInitializationCategory getMyLineChartDataSetWith:oneYVals withLabelText:labelStr1];
         oneSet.highlightEnabled = NO;
@@ -163,15 +165,13 @@
         combineData.lineData = lineAllData;
         
         combineData.candleData = candleData;
-        //    self.myBarChartView.leftAxis.axisMaximum =x 0.78;
-        //    self.myBarChartView.leftAxis.axisMinimum = -0.96;
         self.myBarChartView.data = combineData;
 
         [self.myBarChartView setVisibleXRangeMaximum:50];
-        [self.myBarChartView setVisibleXRangeMinimum:50];
         [self.myBarChartView setVisibleXRangeMinimum:20];
         [self.myBarChartView moveViewToX:self.candleArray.count];
         [self.myBarChartView autoScale];
+    
 //    }
 }
 

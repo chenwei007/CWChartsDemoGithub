@@ -24,12 +24,14 @@ public protocol ChartViewDelegate
     /// - parameter entry: The selected Entry.
     /// - parameter highlight: The corresponding highlight object that contains information about the highlighted position such as dataSetIndex etc.
     @objc optional func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight)
+    @objc optional func chartValueHighterSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight)// 区别高亮是点击还是拖拽
     
     // Called when nothing has been selected or an "un-select" has been made.
     @objc optional func chartValueNothingSelected(_ chartView: ChartViewBase)
     
     // Callbacks when the chart is scaled / zoomed via pinch zoom gesture.
     @objc optional func chartScaled(_ chartView: ChartViewBase, scaleX: CGFloat, scaleY: CGFloat)
+    @objc optional func chartScaled(_ chartView: ChartViewBase, matrix: CGAffineTransform)//本人为了多图联动(缩放)修改的代理方法
     
     // Callbacks when the chart is moved / translated via drag gesture.
     @objc optional func chartTranslated(_ chartView: ChartViewBase, dX: CGFloat, dY: CGFloat)//源码
@@ -573,7 +575,46 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
         // redraw the chart
         setNeedsDisplay()
     }
-    
+    open func myHighlightValue(_ highlight: Highlight?, callDelegate: Bool)
+    {
+        var entry: ChartDataEntry?
+        var h = highlight
+        
+        if h == nil
+        {
+            _indicesToHighlight.removeAll(keepingCapacity: false)
+        }
+        else
+        {
+            // set the indices to highlight
+            entry = _data?.entryForHighlight(h!)
+            if entry == nil
+            {
+                h = nil
+                _indicesToHighlight.removeAll(keepingCapacity: false)
+            }
+            else
+            {
+                _indicesToHighlight = [h!]
+            }
+        }
+        
+        if callDelegate && delegate != nil
+        {
+            if h == nil
+            {
+                delegate!.chartValueNothingSelected?(self)
+            }
+            else
+            {
+                // notify the listener
+                delegate!.chartValueHighterSelected?(self, entry: entry!, highlight: h!)
+            }
+        }
+        
+        // redraw the chart
+        setNeedsDisplay()
+    }
     /// - returns: The Highlight object (contains x-index and DataSet index) of the
     /// selected value at the given touch point inside the Line-, Scatter-, or
     /// CandleStick-Chart.
@@ -602,7 +643,7 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
             , isDrawMarkersEnabled &&
                 valuesToHighlight()
             else { return }
-        
+
         for i in 0 ..< _indicesToHighlight.count
         {
             let highlight = _indicesToHighlight[i]
@@ -613,6 +654,7 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
                 else { continue }
             
             let entryIndex = set.entryIndex(entry: e)
+            
             if entryIndex > Int(Double(set.entryCount) * _animator.phaseX)
             {
                 continue
@@ -621,14 +663,15 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
             let pos = getMarkerPosition(highlight: highlight)
 
             // check bounds
-            if !_viewPortHandler.isInBounds(x: pos.x, y: pos.y)
-            {
-                continue
-            }
-
+            //此处本人注释了，因为当滑动到图表外时，高亮的弹窗要靠着图表的边
+//            if !_viewPortHandler.isInBounds(x: pos.x, y: pos.y)
+//            {
+//                continue
+//            }
+            
             // callbacks to update the content
             marker.refreshContent(entry: e, highlight: highlight)
-            
+        
             // draw the marker
             marker.draw(context: context, point: pos)
         }

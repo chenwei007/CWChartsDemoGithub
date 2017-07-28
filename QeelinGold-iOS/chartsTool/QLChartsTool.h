@@ -11,4 +11,5 @@
 @interface QLChartsTool : NSObject
 + (instancetype)shareManager;
 - (void)setupChartsModel:(QLChartsModel *)chartsModel withview:(LineChartView *)chartsview;
+- (NSString *)getTimeLineLabelTextWithIndex:(NSInteger)index;
 @end

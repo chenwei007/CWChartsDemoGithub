@@ -15,6 +15,7 @@
 @interface QLChartsTool()
 @property (nonatomic ,strong)QLChartsModel *chartsModel;
 @property (nonatomic ,strong)LineChartView *chartsview;
+@property (nonatomic ,assign) NSInteger myIndex;
 @end
 
 @implementation QLChartsTool
@@ -50,6 +51,37 @@
 //    PTTLog(@"charts-XAxis数据准备完成");
     [self setUpChartsDataSet];
 }
+- (NSString *)getTimeLineLabelTextWithIndex:(NSInteger)index{
+    if (index) {
+        self.myIndex = index;
+    }else{
+        index = self.myIndex;
+    }
+    NSString *myStr = @"";
+    NSArray *yArray = self.chartsModel.LineChartDataSetOneArray[index];
+    double datasY = [[yArray objectAtIndex:1] doubleValue];
+    NSArray *arr = self.chartsModel.LineChartDataSetTwoArray[index];
+    double datas2Y = [[arr objectAtIndex:1] doubleValue];
+    double datas3 = 0.00;
+    NSString *plusStr = @"";
+    if (datasY > self.chartsModel.yesterdayPrice) {
+        datas3 = (datasY - self.chartsModel.yesterdayPrice ) / self.chartsModel.yesterdayPrice;
+        plusStr = @"+";
+    }else if (datasY == self.chartsModel.yesterdayPrice){
+        datas3 = 0.00;
+    }else if (datasY < self.chartsModel.yesterdayPrice){
+        datas3 = (self.chartsModel.yesterdayPrice - datasY) / self.chartsModel.yesterdayPrice;
+        plusStr = @"-";
+    }
+    NSString *datas3Y = [NSString stringWithFormat:@"涨跌  %@%0.2f%@",plusStr,datas3 * 100,@"%"];
+    NSString *timestr = self.chartsModel.xBottonAxisArray[index];
+    NSString *str1 = [NSString stringWithFormat:@"价格  %0.2f",datasY];
+    NSString *str2 = [NSString stringWithFormat:@"均价  %0.2f",datas2Y];
+    myStr = [NSString stringWithFormat:@"     %@    %@    %@",str1,str2,datas3Y];
+    return myStr;
+
+}
+
 - (void)setUpChartsDataSet{
     // 第一条折线-设置分时图平均值相关数据
     NSMutableArray *oneYVals = [NSMutableArray array];
@@ -130,6 +162,7 @@
     }else{
         //创建第一个LineChartDataSet对象
         set1 = [QLChartsInitializationCategory getMyLineChartDataSetWith:oneYVals withLabelText:@""];
+        set1.highlightColor = [UIColor blackColor];
         set1.drawFilledEnabled = YES;//是否填充颜色
         NSArray *gradientColors = @[
                                     (id)[ChartColorTemplates colorFromString:@"#f1f5f8"].CGColor,

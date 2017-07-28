@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "btn1ViewController.h"
 #import "btn2ViewController.h"
+#import "btn3ViewController.h"
 #import "UIButton+Action.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
@@ -47,6 +48,14 @@
     btn2.backgroundColor = [UIColor blackColor];
     [btn2 addTarget:self action:@selector(btn2click) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn2];
+    
+    UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn3.frame = CGRectMake(CGRectGetMaxX(btn2.frame)+ 20, 250, 100, 40);
+    [btn3 setTitle:@"图表2" forState:UIControlStateNormal];
+    btn3.backgroundColor = [UIColor blackColor];
+    [btn3 addTarget:self action:@selector(btn3click) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn3];
+
     
     //第一个按钮
     UIButton *button1 = [UIButton createBtnWithFrame:CGRectMake(10, 300, 100, 50) title:@"按钮" actionBlock:^(UIButton *button) {
@@ -98,6 +107,10 @@ NSString *implementOnlyDeclare(id class ,SEL sel,NSString * first,NSString * sec
 }
 - (void)btn2click{
     btn2ViewController *vc = [[btn2ViewController alloc  ]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)btn3click{
+    btn3ViewController *vc = [[btn3ViewController alloc  ]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)didReceiveMemoryWarning {

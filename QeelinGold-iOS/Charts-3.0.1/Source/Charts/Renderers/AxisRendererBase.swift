@@ -143,11 +143,33 @@ open class AxisRendererBase: Renderer
             
             var v = yMin
             
-            for _ in 0 ..< labelCount
-            {
-                axis.entries.append(v)
-                v += interval
-            }
+            // 自定义参数，效果是控制x轴数据是否均分
+            if axis.xAxisIsEvenlyEnabled {
+                for i in 0..<labelCount{
+//                    print(i)
+                    if i == 0 {
+                        axis.entries.append(0.0)
+                    } else if i == 1 {
+                        axis.entries.append(100)
+                    } else if i == 2 {
+                        axis.entries.append(400)
+                    } else if i == 3 {
+                        axis.entries.append(600)
+                    }
+                }
+            }else {
+                for _ in 0 ..< labelCount
+                {
+                    axis.entries.append(v)
+                    v += interval
+                }
+            }//end
+            //源码部分
+//            for _ in 0 ..< labelCount
+//            {
+//                axis.entries.append(v)
+//                v += interval
+//            }
             
             n = labelCount
         }

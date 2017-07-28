@@ -226,9 +226,25 @@ open class XAxisRenderer: AxisRendererBase
             
             if viewPortHandler.isInBoundsX(position.x)
             {
-                let label = xAxis.valueFormatter?.stringForValue(xAxis.entries[i], axis: xAxis) ?? ""
-
-                let labelns = label as NSString
+                var label = xAxis.valueFormatter?.stringForValue(xAxis.entries[i], axis: xAxis) ?? ""
+                var labelns = label as NSString
+                // 自定义参数，效果是控制x轴数据是否均分
+                if xAxis.xAxisIsEvenlyEnabled {
+//                    print(i)
+                    if i == 0 {
+                        label  = "20:00"
+                        labelns = "20:00"
+                    } else if i == 1 {
+                        label  = "2:30/9:00"
+                        labelns = "2:30/9:00"
+                    } else if i == 2 {
+                        label  = "11:30/13:30"
+                        labelns = "11:30/13:30"
+                    } else if i == 3 {
+                        label  = "15:30"
+                        labelns = "15:30"
+                    }
+                }//end
                 
                 if xAxis.isAvoidFirstLastClippingEnabled
                 {

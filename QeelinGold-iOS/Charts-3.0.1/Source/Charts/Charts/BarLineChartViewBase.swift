@@ -640,6 +640,7 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
                     if delegate !== nil
                     {
                         delegate?.chartScaled?(self, scaleX: scaleX, scaleY: scaleY)
+                        delegate?.chartScaled!(self, matrix: matrix)//本人为了多图联动（缩放）修改的代理方法
                     }
                 }
                 
@@ -714,6 +715,7 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
             }
             else if isHighlightPerDragEnabled
             {
+        
                 let h = getHighlightByTouchPoint(recognizer.location(in: self))
                 
                 let lastHighlighted = self.lastHighlighted
@@ -723,7 +725,8 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
                     (h !== nil && lastHighlighted !== nil && !h!.isEqual(lastHighlighted)))
                 {
                     self.lastHighlighted = h
-                    self.highlightValue(h, callDelegate: true)
+//                    self.highlightValue(h, callDelegate: true)//源码
+                    self.myHighlightValue(h, callDelegate: true)
                 }
             }
         }
@@ -839,7 +842,13 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
     {
         if gestureRecognizer == _panGestureRecognizer
         {
-            if _data === nil || !_dragEnabled ||
+            //源码，修改这里是为了规避当浮窗显示的时候，可以拖拽浮窗移动，而不是图表移动
+//            if _data === nil || !_dragEnabled ||
+//                (self.hasNoDragOffset && self.isFullyZoomedOut && !self.isHighlightPerDragEnabled)
+//            {
+//                return false
+//            }
+            if _data === nil ||
                 (self.hasNoDragOffset && self.isFullyZoomedOut && !self.isHighlightPerDragEnabled)
             {
                 return false

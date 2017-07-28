@@ -164,14 +164,23 @@ open class CombinedChartData: BarLineScatterCandleBubbleChartData
     {
         var data = [ChartData]()
         
-        if lineData !== nil
-        {
-            data.append(lineData)
-        }
         if barData !== nil
         {
             data.append(barData)
         }
+        if lineData !== nil
+        {
+            data.append(lineData)
+        }
+        //源码的东西，这里是为了两图同步高亮显示
+        //        if lineData !== nil
+        //        {
+        //            data.append(lineData)
+        //        }
+        //        if barData !== nil
+        //        {
+        //            data.append(barData)
+        //        }
         if scatterData !== nil
         {
             data.append(scatterData)

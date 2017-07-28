@@ -1,0 +1,250 @@
+//
+//  QLCandleStickMarker.swift
+//  QeelinGold-iOS
+//
+//  Created by MacBook on 2017/4/14.
+//  Copyright © 2017年 chen. All rights reserved.
+//
+
+import UIKit
+import Charts
+
+class QLCandleStickMarker: MarkerImage {
+    open var leftLabel : UILabel?
+    open var rightLabel : UILabel?
+    open var color: UIColor?
+    open var arrowSize = CGSize(width: 0, height: 0)
+    open var font: UIFont?
+    open var textColor: UIColor?
+    open var insets = UIEdgeInsets()
+    open var minimumSize = CGSize()
+    open var context: CGContext?
+    open var clickPoint: CGPoint = CGPoint()
+    
+    fileprivate var labelnsLeft: NSString?
+    fileprivate var _labelSizeLeft: CGSize = CGSize()
+    fileprivate var labelnsRight: NSString?
+    fileprivate var _labelSizeRight: CGSize = CGSize()
+    fileprivate var labelnsBotton: NSString?
+    fileprivate var _labelSizeBotton: CGSize = CGSize()
+    fileprivate var _paragraphStyle: NSMutableParagraphStyle?
+    fileprivate var _drawAttributes = [String : AnyObject]()
+    
+    public init(color: UIColor, font: UIFont, textColor: UIColor, insets: UIEdgeInsets)
+    {
+        super.init()
+        
+        self.color = color
+        self.font = font
+        self.textColor = textColor
+        self.insets = insets
+        
+        _paragraphStyle = NSParagraphStyle.default.mutableCopy() as? NSMutableParagraphStyle
+        _paragraphStyle?.alignment = .center
+    }
+    open override func offsetForDrawing(atPoint point: CGPoint) -> CGPoint
+    {
+        let size = self.size
+        var point = point
+        point.x -= size.width / 2.0
+        point.y -= size.height
+        return super.offsetForDrawing(atPoint: point)
+    }
+    
+    open override func draw(context: CGContext, point: CGPoint)
+    {
+//        print(point.x)
+//        print(labelnsLeft as Any)
+        if labelnsLeft == nil
+        {
+            return
+        }
+        clickPoint = point
+        let offset = self.offsetForDrawing(atPoint: point)
+        let size = self.size
+        
+        var rect = CGRect(
+            origin: CGPoint(
+                x: point.x + offset.x,
+                y: point.y + offset.y),
+            size: size)
+        rect.origin.x -= size.width / 2.0
+        rect.origin.y -= size.height
+        
+        context.saveGState()
+        
+        if let color = color
+        {
+//            context.setLineWidth(3.0)
+//            context.setFillColor(color.cgColor)
+//            context.setStrokeColor((self.textColor?.cgColor)!)
+//            context.beginPath()
+//            context.move(to: CGPoint(
+//                x: 31,
+//                y: rect.origin.y + arrowSize.height + rect.size.height / 2 +  rect.size.height / 4))
+//            context.addLine(to: CGPoint(
+//                x: 31 + rect.size.width,
+//                y: rect.origin.y + arrowSize.height + rect.size.height / 2 +  rect.size.height / 4))
+//            context.addLine(to: CGPoint(
+//                x: 31 + rect.size.width,
+//                y: rect.origin.y + arrowSize.height + rect.size.height +  rect.size.height / 4))
+//            context.addLine(to: CGPoint(
+//                x: 31,
+//                y: rect.origin.y + arrowSize.height + rect.size.height +  rect.size.height / 4))
+//            context.addLine(to: CGPoint(
+//                x: 31,
+//                y: rect.origin.y + arrowSize.height + rect.size.height / 2 +  rect.size.height / 4))
+//            context.fillPath()
+//            context.strokePath()
+//            
+//            rect.origin.y += self.insets.top
+//            rect.size.height -= self.insets.top + self.insets.bottom
+//            rect.origin.x = 31
+//            rect.origin.y = rect.origin.y + arrowSize.height + rect.size.height / 2 +  rect.size.height / 4 + self.insets.top
+//            
+//            UIGraphicsPushContext(context)
+//            labelnsLeft?.draw(in: rect, withAttributes: _drawAttributes)
+//            UIGraphicsPopContext()
+            
+            context.setFillColor(color.cgColor)
+            context.beginPath()
+            context.move(to: CGPoint(
+                x: (self.chartView!.bounds.size.width) - rect.size.width - 5,
+                y: rect.origin.y + rect.size.height / 2 + rect.size.height / 4 ))
+            context.addLine(to: CGPoint(
+                x: (self.chartView!.bounds.size.width) - rect.size.width + rect.size.width - 5,
+                y: rect.origin.y + rect.size.height / 2 + rect.size.height / 4))
+            context.addLine(to: CGPoint(
+                x: (self.chartView!.bounds.size.width) - rect.size.width + rect.size.width - 5,
+                y: rect.origin.y + rect.size.height + rect.size.height / 4))
+            context.addLine(to: CGPoint(
+                x: (self.chartView!.bounds.size.width) - rect.size.width - 5 ,
+                y: rect.origin.y + rect.size.height + rect.size.height / 4))
+            context.addLine(to: CGPoint(
+                x: (self.chartView!.bounds.size.width) - rect.size.width - 5,
+                y: rect.origin.y + rect.size.height / 2 + rect.size.height / 4))
+            context.fillPath()
+            
+            rect.size.height -= self.insets.top + self.insets.bottom
+            rect.origin.x = (self.chartView!.bounds.size.width) - rect.size.width - 5
+            rect.origin.y = rect.origin.y + rect.size.height / 2 + rect.size.height / 4 + arrowSize.height + self.insets.top
+            
+            UIGraphicsPushContext(context)
+            labelnsLeft?.draw(in: rect, withAttributes: _drawAttributes)
+            UIGraphicsPopContext()
+            
+//            print(rect.origin.x)
+//            print(clickPoint.x)
+//            print((self.chartView?.bounds.size.width)! - rect.size.width / 2)
+            if clickPoint.x < rect.size.width / 2 + 35 {
+                clickPoint.x = rect.size.width / 2 + 35
+            }else if clickPoint.x > (self.chartView?.bounds.size.width)! - rect.size.width / 2 - 10{
+                clickPoint.x = (self.chartView?.bounds.size.width)! - rect.size.width / 2 - 5
+            }
+            context.setFillColor(color.cgColor)
+            context.beginPath()
+            context.move(to: CGPoint(
+                x: clickPoint.x - rect.size.width / 2,
+                y: (self.chartView?.bounds.size.height)! - 30))
+            context.addLine(to: CGPoint(
+                x: clickPoint.x - rect.size.width / 2 + rect.size.width,
+                y: (self.chartView?.bounds.size.height)! - 30))
+            context.addLine(to: CGPoint(
+                x: clickPoint.x - rect.size.width / 2 + rect.size.width,
+                y: (self.chartView?.bounds.size.height)! - 15))
+            context.addLine(to: CGPoint(
+                x: clickPoint.x - rect.size.width / 2 ,
+                y: (self.chartView?.bounds.size.height)! - 15))
+            context.addLine(to: CGPoint(
+                x: clickPoint.x - rect.size.width / 2,
+                y: (self.chartView?.bounds.size.height)! - 30))
+            context.fillPath()
+            
+            rect.size.height -= self.insets.top + self.insets.bottom
+            rect.origin.x = clickPoint.x - rect.size.width / 2 + arrowSize.height + self.insets.top
+            rect.origin.y = (self.chartView?.bounds.size.height)! - 30
+            
+            UIGraphicsPushContext(context)
+            labelnsBotton?.draw(in: rect, withAttributes: _drawAttributes)
+            UIGraphicsPopContext()
+            context.restoreGState()
+            
+            
+        }
+    }
+    
+    open override func refreshContent(entry: ChartDataEntry, highlight: Highlight)
+    {
+        if entry is CandleChartDataEntry {
+            let CandlechartEntryDic = entry.data
+            let time = CandlechartEntryDic?["time"] as? NSString ?? ""
+            let high = CandlechartEntryDic?["high"] as? NSString ?? ""
+            setLabelLeft(String(high))
+            setLabelBotton(String(time))
+            
+        } else if entry is  ChartDataEntry{
+            let chartEntryDic = entry.data
+            let datasY = chartEntryDic?["datasY"] as? NSString ?? ""
+            let datas3Y = chartEntryDic?["datas3Y"] as? NSString ?? ""
+            let timestr = chartEntryDic?["timeStr"] as? NSString ?? ""
+            setLabelLeft(String(datasY))
+            setLabelRight(String(datas3Y))
+            setLabelBotton(String(timestr))
+        }
+    }
+    
+    open func setLabelLeft(_ label: String)
+    {
+        labelnsLeft = label as NSString
+        
+        _drawAttributes.removeAll()
+        _drawAttributes[NSFontAttributeName] = self.font
+        _drawAttributes[NSParagraphStyleAttributeName] = _paragraphStyle
+        _drawAttributes[NSForegroundColorAttributeName] = self.textColor
+        
+        _labelSizeLeft = labelnsLeft?.size(attributes: _drawAttributes) ?? CGSize.zero
+        
+        var size = CGSize()
+        size.width = _labelSizeLeft.width + self.insets.left + self.insets.right
+        size.height = _labelSizeLeft.height + self.insets.top + self.insets.bottom
+        size.width = max(minimumSize.width, size.width)
+        size.height = max(minimumSize.height, size.height)
+        self.size = size
+    }
+    open func setLabelRight(_ label: String)
+    {
+        labelnsRight = label as NSString
+        
+        _drawAttributes.removeAll()
+        _drawAttributes[NSFontAttributeName] = self.font
+        _drawAttributes[NSParagraphStyleAttributeName] = _paragraphStyle
+        _drawAttributes[NSForegroundColorAttributeName] = self.textColor
+        
+        _labelSizeRight = labelnsRight?.size(attributes: _drawAttributes) ?? CGSize.zero
+        
+        var size = CGSize()
+        size.width = _labelSizeRight.width + self.insets.left + self.insets.right
+        size.height = _labelSizeRight.height + self.insets.top + self.insets.bottom
+        size.width = max(minimumSize.width, size.width)
+        size.height = max(minimumSize.height, size.height)
+        self.size = size
+    }
+    open func setLabelBotton(_ label: String)
+    {
+        labelnsBotton = label as NSString
+        
+        _drawAttributes.removeAll()
+        _drawAttributes[NSFontAttributeName] = self.font
+        _drawAttributes[NSParagraphStyleAttributeName] = _paragraphStyle
+        _drawAttributes[NSForegroundColorAttributeName] = self.textColor
+        
+        _labelSizeBotton = labelnsBotton?.size(attributes: _drawAttributes) ?? CGSize.zero
+        
+        var size = CGSize()
+        size.width = _labelSizeBotton.width + self.insets.left + self.insets.right
+        size.height = _labelSizeBotton.height + self.insets.top + self.insets.bottom
+        size.width = max(minimumSize.width, size.width)
+        size.height = max(minimumSize.height, size.height)
+        self.size = size
+    }
+}
